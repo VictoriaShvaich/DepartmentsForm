@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о департаменте</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+             <form class="departmentForm">
+                 <h1>Форма заполнения информации о департаменте</h1>
+                 <input type="text" id="depName" class="input" placeholder="Название" required>
+                 <input type="text" id="manager" class="input" placeholder="ФИО менеджера" required>
+                 <input type="tel" id="phone" class="input" placeholder="Телефон" required>
+                 <input type="number" id="employees" class="input" placeholder="Количество сотрудников" required>
+                 <input type="text" id="address" class="input" placeholder="Юридический адрес" required>
+ 
+                 <div class="main-buttons">
+                     <button type="button" id="addData">Добавить запись</button>
+                     <button type="button" id="reset">Очистить форму</button>
+                     <button type="button" id="showAll">Показать все записи</button>
+                 </div>
+ 
+                 <div class="delete-btn">
+                     <h3>Выбор записи</h3>
+                     <div class="delete">
+                         <select id="selectId"></select>
+                         <button type="button" id="delete">Удалить запись</button>
+                         <button type="button" id="showById">Показать элемент по ID</button>
+                     </div>
+                 </div>            
+             </form>
+        </div>
+     
+        <div id="output"></div>
+     
+    </div>
+    
+    <script src="js/template.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/storage.js"></script>
+</body>
+</html>
